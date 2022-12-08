@@ -1,0 +1,96 @@
+.sidedrawer {
+    width: 45%;
+    height: 100vh;
+    background-color: white;
+    /* white color to contrast the body of the product screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    /* z-index 200 puts sidedrawer above both the nabvbar(50) and backdrop(100) */
+     transition: all 0.3s ease-out;
+     /* sets the sideDrawer to move transition starting fast and ends slow  */
+     transform: translateX(-100%);
+     /* moves sideDrawer 100% off screen */
+
+     /* sets the sidedrawer links to the center of the div container  */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     background-image: url('https://images.unsplash.com/photo-1495469552678-d0fb77903866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c25vd2JvYXJkZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');     
+     background-repeat: no-repeat;
+     background-size:cover;
+    
+}
+
+.sidedrawer.show {
+    transform: translateX(0);
+}
+
+.sidedrawer__links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-style: oblique;
+}
+
+.sidedrawer__links > li {
+    display: flex;
+    align-items: center;
+}
+
+.sidedrawer__links > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    flex: 1;
+    padding: 1rem;
+    color: #171717;
+    font-size: 1.6rem;
+}
+
+.sidedrawer__links > li >a:hover{
+    background: #333;
+    color: peru;
+    transition: 500ms linear;
+    transform: scale(1.1);
+
+}
+
+.sidedrawer__links > li > a > span {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.sidedrawer__cartbadge {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    background-color: #171717;
+    color: white;
+    margin-left: 8px
+}
+/* changes color of items in cart when hovering over cart link */
+.sidedrawer__links > li > a:hover .sidedrawer__cartbadge {
+    background-color: #fff;
+    color: #171717;
+    transition: 500ms linear;
+    transform: scale(1.1);
+}
+
+/* query prevents sidedrawer from showing when not in mobile mode */
+@media (min-width: 960px){
+    .sidedrawer {
+        display: none;
+    }
+};
+    
+
+

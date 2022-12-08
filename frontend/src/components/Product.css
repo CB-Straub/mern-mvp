@@ -1,0 +1,129 @@
+/* /* creates a card for each product without bootstrappin */
+.product {
+    width: 300px;
+    padding: 1rem;
+    /* moves card off the left edge of screen */
+    cursor:pointer;
+    margin: 8px auto;
+    background: whitesmoke;
+    box-shadow: 2px 4px 5px rgba(0 , 0 , 0, 0.4);
+    border-radius: 13px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+
+.product > img {
+
+    height: 170px;
+    border-radius: 10px;
+    
+    
+}
+.product:hover{
+    transition: 500ms linear;
+    transform: scale(1.1);
+}
+
+.product__info > p {
+    margin-bottom: 8px;
+}
+
+.info__name {
+    font-size: 1rem;
+    overflow: hidden;
+
+}
+
+.info__price {
+    font-weight: bold;
+}
+
+.info__description {
+    font-size: 0.9rem;
+}
+
+.info__button {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #212121;
+    color: whitesmoke ;
+    padding: 4px 17px;
+    border: 1px solid rgb(50, 49, 49);
+    border-radius: 3px;
+    font-size: 1rem;
+    box-shadow:  1px 3px 4px #212121;
+    
+}
+
+.info__button:hover {
+    background: rgb(215, 214, 214);
+    color: #171717;
+    transition: 400ms linear;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1232px) {
+    .product {
+        width: 360px
+    }
+
+}
+@media (max-width: 1115px) {
+    .product {
+        width: 330px
+    }
+
+}
+
+@media (max-width: 1028px) {
+    .product {
+        width: 300px
+    }
+
+}
+@media (max-width: 950) {
+    .product {
+        width: 400px
+    }
+
+}
+@media (max-width: 830px) {
+    .product {
+        width: 330px
+    }
+
+}
+@media (max-width: 700px) {
+    .product {
+        width: 290px
+    }
+
+}
+@media (max-width: 630px) {
+    .product {
+        width: 350px
+    }
+
+}
+@media (max-width: 500px) {
+    .product {
+        width: 325px
+    }
+
+}
+@media (max-width: 400px) {
+    .product {
+        width: 250px
+    }
+
+}
+
+
