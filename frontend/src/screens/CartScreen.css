@@ -53,9 +53,32 @@
     opacity: 0.9;
 }
 
+.checkoutBtn:hover {
+    background: whitesmoke;
+    color: #171717;
+    font-size: 1rem;
+
+}
+
 @media (max-width: 1320px) {
     .cartscreen {
         max-width: 960px;
+    }
+}
+
+@media (max-width: 960px) {
+    .cartscreen {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 960px) {
+    .cartscreen {
+        flex-direction: column;
+    }
+    .cartscreen__right {
+        margin: 1rem;
+        color: #f4f4f4;
     }
 }
 

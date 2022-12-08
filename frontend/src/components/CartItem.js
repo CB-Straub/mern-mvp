@@ -10,7 +10,9 @@ const CartItem = () => {
   return (
     <div className='cartitem'>
         <div className='cartitem__image'>
-            <img src="https://images.unsplash.com/photo-1629481657693-90665fc83bad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHN1cmZib2FyZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt='productNAme'/>
+            <img src="https://images.unsplash.com/photo-1629481657693-90665fc83bad?ixlib=rb-4.0.3&
+            ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHN1cmZib2FyZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" 
+            alt='productNAme'/>
         </div>
 
         <Link to={`/product/${1111}`} className='cartitem__name'>

@@ -13,6 +13,10 @@ const CartScreen = () => {
           <h2>Shopping Cart</h2>
 
           <CartItem />
+          <CartItem />
+          <CartItem />
+          <CartItem />
+          <CartItem />
         </div>
         <div className='cartscreen__right'>
           <div className='cartscreen_info'>
@@ -20,7 +24,7 @@ const CartScreen = () => {
             <p>499.99</p>
           </div>
           <div>
-            <button>Checkout</button>
+            <button className='checkoutBtn'>Pay/Checkout</button>
             </div>
         </div>
        </div>
