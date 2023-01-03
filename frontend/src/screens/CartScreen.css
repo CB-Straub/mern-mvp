@@ -59,6 +59,11 @@
     font-size: 1rem;
 
 }
+.return_to_shop {
+    color: Black;
+    padding: 15px;
+    font-size: larger;
+}
 
 @media (max-width: 1320px) {
     .cartscreen {

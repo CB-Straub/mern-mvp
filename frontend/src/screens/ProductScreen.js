@@ -1,22 +1,52 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+
+//actions
+import { getProductDetails } from '../redux/actions/productActions'
+import { addToCart } from '../redux/actions/cartActions'
+//css styles
 import './ProductScreen.css'
 
 
-const ProductScreen = () => {
+const ProductScreen = ( {match, history} ) => {
+
+  const [qty, setQty] = useState(1)
+  const dispatch = useDispatch()
+
+  const productDetails = useSelector((state) => state.getProductDetails)
+
+  const { product ,loading, error } = productDetails
+
+  useEffect(() => {
+    if(product && match.params.id !== product._id) {
+      dispatch(getProductDetails(match.params.id))
+    }
+  }, [dispatch, match, product])
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(product._id, qty ))
+    history.push(`/cart`)
+  }
+
   return (
 
-    // hardcoded values need to be rendered dynamically - redux
+    // hardcoded values need to be rendered dynamically - redux...completed on 01.02.23 by straub
     <div className='productscreen'>
-
-        <div className='productscreen__left'>
+      {loading ? (
+          <h2>Loading...</h2>
+      ): error ? (
+        <h2> { error }</h2>
+      ): (
+        <>
+         <div className='productscreen__left'>
           <div className='image__left'>
-          <img src="https://images.unsplash.com/photo-1629481657693-90665fc83bad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHN1cmZib2FyZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt='productNAme'/>
+          <img src={product.imageUrl} alt={ product.name }/>
           </div>
           
         <div className='info__left'>
-          <p className='name__left'>Product 1</p>
-          <p className='price__left'>$499.99</p>
-          <p className='description__left'>Pass the scription on the left hand side</p>
+          <p className='name__left'> {product.name} </p>
+          <p className='price__left'> ${product.price} </p>
+          <p className='description__left'> {product.description} </p>
 
         </div>
 
@@ -25,34 +55,44 @@ const ProductScreen = () => {
     <div className='productscreen__right'>
       <div className='info__right'>
         <p>
-          Price: <span>$499.99</span>
+          Price: <span>${product.price}</span>
         </p>
         <p>
-          Status: <span>In Stock</span>
+          Status: <span>{product.countInStock > 0 ? "In Stock": "Out of Stock"} </span>
         </p>
         <p>
           QTY
-          <select>
-            <option value='1'>uno</option>
-            <option value='2'>dos</option>
-            <option value='3'>tres</option>
-            <option value='4'>4</option>
+          <select value={qty} onChange={(e) => setQty(e.target.value)}>
+           {[...Array(product.countInStock).keys()].map((x) => (
+             <option key={x+1} value={x+1}>{x+1}</option>
+           ))}
           </select>
         </p>
         <p>
-          <button type='button' className='button__right'>Add to Cart</button>
+          <button onClick={addToCartHandler} type='button' className='button__right'>Add to Cart</button>
         </p>
 
+       </div>
+
+
+
+
+
+
       </div>
-
-
-
-
-
-
-    </div>
+    </>
+    )}
     </div>
   )
-}
+}   
+   
+ 
+        
+       
+  
+
+       
+  
+
 
 export default ProductScreen

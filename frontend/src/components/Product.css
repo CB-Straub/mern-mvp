@@ -69,6 +69,12 @@
     transition: 400ms linear;
     transform: scale(1.1);
 }
+.button__right:hover{
+    background: rgb(215, 214, 214);
+    color: #171717;
+    font-size: 1.2rem;
+
+}
 
 @media (max-width: 1232px) {
     .product {

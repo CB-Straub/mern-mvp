@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 //import { Schema, model } from 'mongoose'  above can be written ike this also for ES6
 
-const productSchema = new mongoose.Schema({
+const productSchema =  mongoose.Schema({
     name: {
         type: String,
         required: true

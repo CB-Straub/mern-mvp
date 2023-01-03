@@ -4,12 +4,12 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 // composeWithDevTools = enhancer for the store and reducers
 
 
-//reduceers
+//reducers
 import { cartReducer } from './reducers /cartReducers'
 import { getProductsReducer, getProductDetailsReducer  } from './reducers /productReducers'
 
 const reducer = combineReducers({
-    cart: cartReducer,
+    cart: cartReducer,   //cartReducer is added to the value of cart and is now in the store as state
     getProducts: getProductsReducer,
     getProductDetails: getProductDetailsReducer
 })

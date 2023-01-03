@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-//provides access to the state in our store
+//provides entire application access to the state in our store
 import { Provider } from 'react-redux'
 import store from './redux/store'
  

@@ -17,7 +17,7 @@ export const cartReducer = (state = CART_INITIAL_STATE, action) => {
 
         //x = current item being mapped through
 
-        // if we find the new existing item in the product array (from the action.payload item above) we add it to the old array = the cart
+        // if we find the new existing item in the product array (from the action.payload item above) we add the new array (.map array method creates a new array) it to the old array = the cart
         if(existItem) {
             return {
                 ...state,

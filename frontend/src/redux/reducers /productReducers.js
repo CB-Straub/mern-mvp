@@ -6,7 +6,7 @@ export const getProductsReducer = (state = { products: []}, action) => {
     switch( action.type) {
         case actionTypes.GET_PRODUCTS_REQUEST:
             return {
-                // allows app to wait for the data, making the loading equal to false(beacuse its done loading) and not crash
+                // allows app to wait for the data to load, making the loading equal to false(beacuse its done loading) and not crash
                 loading: true,
                 products: []
          }

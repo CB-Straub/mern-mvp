@@ -3,24 +3,24 @@
 import *  as actionTypes from '../constants/cartConstant'
 
 import axios from 'axios'
-//function takes the product id and the qty of that id (dispatch and getState from thunk)
+//function takes the product id and the qty of that product id (dispatch and getState fucntion is from thunk)
 export const addToCart = ( id, qty ) =>  async ( dispatch, getState ) => {
     const { data }  = await axios.get(`/api/products/${id}`)
-
+                                                                //api/products = see productRoutes file in backend, routes folder.  
     dispatch({
         type: actionTypes.ADD_TO_CART,
         payload: {
-            product: data.id,
+            product: data._id,
             name: data.name,
             imageUrl: data.imageUrl,
             price: data.price,
             countInStock: data.countInStock,
             qty
-        }
+        } // payload object {} is coming from the database 
     })
 
     //save cart to local storage
-    localStorage.setItem('cart', JSON.stringify(getState().cart.cartItems))
+    localStorage.setItem('cart', JSON.stringify(getState().cart.cartItems))  //cart value is accessed from the store and the cartReducer
 }
 
 export const removeFromCart = (id) => ( dispatch, getState ) => {
@@ -30,7 +30,7 @@ export const removeFromCart = (id) => ( dispatch, getState ) => {
     })
 
     //update local storage to remove the item
-    localStorage.localStorage.setItem( 'cart' , JSON.stringify(getState().cart.cartItems))
+    localStorage.setItem( 'cart' , JSON.stringify(getState().cart.cartItems))
 }
 
 

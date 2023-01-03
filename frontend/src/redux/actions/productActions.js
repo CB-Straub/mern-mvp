@@ -23,7 +23,7 @@ export const getProducts = () => async ( dispatch ) => {
         
     }
 }
-
+//making a request to the productRoutes in the backend to get a specific product by its id 
 export const getProductDetails = ( id ) => async ( dispatch ) => {
     try {
         dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST})
