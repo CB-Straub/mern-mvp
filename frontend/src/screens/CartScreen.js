@@ -25,9 +25,14 @@ const CartScreen = () => {
   const removeHandler = ( id ) => {
     dispatch(removeFromCart(id))
   }
-// calculating the subtotal
+// cart count will update if number of items is changed by user
   const getCartCount = () => {
     return cartItems.reduce(( qty, item ) => Number(item.qty) + qty, 0)
+  }
+
+  //calculate subtotal price
+  const cartSubtotal = () => {
+    return cartItems.reduce((price, item) => item.price * item.qty + price, 0)
   }
  
   return (
@@ -55,7 +60,8 @@ const CartScreen = () => {
         <div className='cartscreen__right'>
           <div className='cartscreen_info'>
             <p>Subtotal ({getCartCount()})  items  </p>
-            <p>499.99</p>
+            
+            <p>${cartSubtotal().toFixed(2)}</p>
           </div>
           <div>
             <button className='checkoutBtn'>Pay/Checkout</button>

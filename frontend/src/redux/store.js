@@ -17,8 +17,18 @@ const reducer = combineReducers({
 // in this app we have one (thunk) which helps maake async requests in our actions
 const middleware = [thunk] 
 
+//initial value for cart items to persist in local storage
+const cartLocalStorage = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem('cart')) : []
+
+const INITIAL_STATE = {
+    cart: {
+        cartItems : cartLocalStorage
+    }
+}
+
 const store = createStore(
     reducer,
+    INITIAL_STATE,
     composeWithDevTools(applyMiddleware(...middleware))
 )
 
