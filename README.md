@@ -1,6 +1,6 @@
 This project is a MVP(minimally viable product) mockup design for an ecommerce shop website using MongoDB, Express.js, React and Node.js. (MERN)
-Made to be responsive for mobile applications a "sidedrawer" menu will open if you reduce the screen size to mobile and a hamburger menu will appear top right of the screen.
-All design and HTML and CSS are done from scratch without bootstrapping any other software. 
+Made to be responsive for mobile applications a "sidedrawer" menu will open if you reduce the screen size to mobile and a hamburger menu will appear top right of the screen. Why does hamburger mean three horizontal lines stacked on top of each other?  What kind of hamburger only has three things on it. 
+All design and HTML and CSS are done from scratch without bootstrapping any other software, which isnt as hard as you would think, just takes a bunch of time....hence the bootstrap. Time is money for some folks.  I just like to know how to do things.  I bake my own cookies too.  
 The database used for this MVP is MongoDB Atlas. 
 
 Frontend Dependencies:  React, React-Redux(state management), redux-thunk(async middleware), axios, react-router-dom, redux-devtools-extension, react-dom
