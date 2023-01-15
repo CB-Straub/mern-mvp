@@ -1,6 +1,6 @@
 This project is a MVP(minimally viable product) mockup design for an ecommerce shop website using MongoDB, Express.js, React and Node.js. (MERN)
 Made to be responsive for mobile applications a "sidedrawer" menu will open if you reduce the screen size to mobile and a hamburger menu will appear top right of the screen. Why does hamburger mean three horizontal lines stacked on top of each other?  What kind of hamburger only has three things on it. 
-All design and HTML and CSS are done from scratch without bootstrapping any other software. Not that I don't enjoy a good bootstrap, I just like to know how to do things. It's for the same reason I nake my own cookies and bread, they taste better.  
+All design and HTML and CSS are done from scratch without bootstrapping any other software. Not that I don't enjoy a good bootstrap, I just like to know how to do things. It's for the same reason I bake my own cookies and bread, they just taste better and it's fun.   
 The database used for this MVP is MongoDB Atlas. 
 
 Frontend Dependencies:  React, React-Redux(state management), redux-thunk(async middleware), axios, react-router-dom, redux-devtools-extension, react-dom
