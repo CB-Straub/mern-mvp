@@ -1,5 +1,5 @@
 //seederScript provides access to the mongoDB database and populates the DB with our product model and data
-//must create a sctipt in package.json that imports this data also
+//must create a script in package.json that imports this data also
 
 require('dotenv').config()
 
