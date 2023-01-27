@@ -15,7 +15,7 @@
 
 
 .navbar__logo h2 {
-    color:  #94f700;
+    color: rgb(255, 222, 222);
     cursor: pointer;    
     font-size: 4rem;
     font-style: oblique;
@@ -33,28 +33,28 @@
 
 }
 .navbar__links > li {
-    padding-left: 1.5rem;
+    padding-left: 1rem;
     /* spaces out cart and shop */
-    padding-right:125px
+    padding-right:65px;
+  
 
 }
 
 .navbar__links > li > a {
     text-decoration: none;
     /* removes the a tag link underline */
-    color: #94f700;
+    color: rgb(104, 240, 74);
     display: flex;
     align-items: center;
     font-size: 1.6rem;
     font-style: oblique;
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
     box-shadow: 5px 5px 15px 5px #000000;
-    background: transparent;
-    
-
     
 }
-
+.navbar__links > li > a:hover {
+    background-color: #000000;
+}
 .navbar__links > li > a > i {
     color: rgb(104, 240, 74);
     padding: .5rem;
@@ -170,6 +170,6 @@
 /* at 500px the navbar logo will switch to smaller font */
 @media (max-width: 500px) {
     .navbar__logo h2 {
-        font-size: 1.2rem;
+        font-size: 2.9rem;
     }
 }
